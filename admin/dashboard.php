@@ -14,49 +14,63 @@
         }
         .sidebar {
             width: 220px;
-            background-color: #343a40;
-            color: darkblue;
+            background-color: #ffffff; /* Sidebar background color */
+            color: blue;
             display: flex;
             flex-direction: column;
-            padding-top: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar .header {
+            background-color: black; /* Black background for the header */
+            color: white; /* White text color */
+            padding: 10px; /* Adjusted padding */
+            text-align: center;
+            font-size: 0.9rem; /* Reduced font size */
         }
         .sidebar a {
             text-decoration: none;
-            color: white;
-            padding: 10px 20px;
+            color: blue; /* Make links blue */
+            padding: 10px 15px;
             display: flex;
             align-items: center;
+            font-size: 0.9rem; /* Adjusted font size for smaller text */
         }
         .sidebar a:hover {
-            background-color: darkblue;
+            background-color: #f0f0f0; /* Highlight link on hover with a light gray */
         }
         .sidebar a i {
             margin-right: 10px;
         }
+        .sidebar .spacer {
+            margin: 15px 0; /* Add vertical space between links */
+        }
         .main-content {
             flex-grow: 1;
-            padding: 10px;
+            padding: 20px; /* Add more padding around the content */
         }
-        /* Add margin for spacing between titles */
-        h7.text-center {
-            margin-bottom: 20px; /* Adjust the value for the desired spacing */
+        h4 {
+            margin-top: 40px; /* Adjust spacing above the dashboard title */
+            display: block; /* Ensure it behaves like a block-level element */
         }
-        h {
-            margin-top: 30px; /* Add some space above the dashboard title */
+        .row .card {
+            margin-top: 15px; /* Add space below the dashboard row */
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <h7 class="text-center">Student Management System</h7>
+        <div class="header">
+            Student Management System
+        </div>
         <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         <a href="#"><i class="fas fa-book"></i> Subjects</a>
         <a href="#"><i class="fas fa-user-graduate"></i> Students</a>
+        <div class="spacer"></div> <!-- Spacer for additional space -->
         <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
 
     <div class="main-content">
-        <h>Dashboard</h>
+        <h4>Dashboard</h4>
         <div class="row">
             <div class="col-md-3">
                 <div class="card text-white bg-primary mb-3">
