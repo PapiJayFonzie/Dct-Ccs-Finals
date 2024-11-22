@@ -1,122 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management System</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            height: 100vh;
-            margin: 0;
-        }
-        .sidebar {
-            width: px;
-            background-color: #ffffff; /* Sidebar background color */
-            color: blue;
-            display: flex;
-            flex-direction: column;
-            border-right: 1px solid #ddd;
-        }
-        .sidebar .header {
-            background-color: black; /* Black background for the header */
-            color: white; /* White text color */
-            padding: 10px; /* Adjusted padding */
-            text-align: center;
-            font-size: 0.9rem; /* Reduced font size */
-            margin-bottom: 15px; /* Added space below the header */
-        }
-        .sidebar a {
-            text-decoration: none;
-            color: blue; /* Make links blue */
-            padding: 10px 15px;
-            display: flex;
-            align-items: center;
-            font-size: 0.9rem; /* Adjusted font size for smaller text */
-        }
-        .sidebar a:hover {
-            background-color: #f0f0f0; /* Highlight link on hover with a light gray */
-        }
-        .sidebar a i {
-            margin-right: 10px;
-        }
-        .sidebar .spacer {
-            margin: 15px 0; /* Add vertical space between links */
-        }
-        .main-content {
-            flex-grow: 1;
-            padding: 20px; /* Add more padding around the content */
-        }
-        h {
-            margin-top: 30px; /* Adjust spacing above the dashboard title */
-            display: block; /* Ensure it behaves like a block-level element */
-            font-size: 2rem;
-        }
-        .row .card {
-            margin-top: 20px; /* Add space below the dashboard row */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .sidebar {
+      width: 200px;
+      background-color: #333;
+      color: #fff;
+      position: fixed;
+      height: 100%;
+      padding: 20px 0;
+    }
+    .sidebar a {
+      display: block;
+      padding: 10px 20px;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+    .logout {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+    }
+    .content {
+      margin-left: 200px;
+      padding: 20px;
+    }
+    .header {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .form-container {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-container button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .form-container button:hover {
+      background-color: #0056b3;
+    }
+    .table-container {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .edit-btn {
+      background-color: #17a2b8;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .delete-btn {
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
-    <div class="sidebar">
-        <div class="header">
-            Student Management System
-        </div>
-        <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-        <a href="#"><i class="fas fa-book"></i> Subjects</a>
-        <a href="#"><i class="fas fa-user-graduate"></i> Students</a>
-        <div class="spacer"></div> <!-- Spacer for additional space -->
-        <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
-    </div>
+  <div class="sidebar">
+    
+  </div>
 
-    <div class="main-content">
-        <h>Dashboard</h>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card text-white bg-primary mb-3">
-                    <div class="card-header">Number of Subjects:</div>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <?php echo 3; // Replace with dynamic data ?>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-primary mb-3">
-                    <div class="card-header">Number of Students:</div>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <?php echo 2; // Replace with dynamic data ?>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-danger mb-3">
-                    <div class="card-header">Number of Failed Students:</div>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <?php echo 0; // Replace with dynamic data ?>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-white bg-success mb-3">
-                    <div class="card-header">Number of Passed Students:</div>
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <?php echo 1; // Replace with dynamic data ?>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="content">
+    <div class="header">Add a New Subject</div>
+    <div class="form-container">
+      <form>
+        <input type="text" placeholder="Subject Code">
+        <input type="text" placeholder="Subject Name">
+        <button type="button">Add Subject</button>
+      </form>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Subject Code</th>
+            <th>Subject Name</th>
+            <th>Option</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1001</td>
+            <td>English</td>
+            <td>
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1002</td>
+            <td>Mathematics</td>
+            <td>
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>1003</td>
+            <td>Science</td>
+            <td>
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>
