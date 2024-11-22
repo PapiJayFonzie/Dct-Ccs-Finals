@@ -81,4 +81,23 @@
             echo "Failed to connect to the database.";
         }
     }
+
+    function addSubject($subjectCode, $subjectName) {
+        $conn = openCon();
+        
+
+        $sql = "INSERT INTO subjects (subject_code, subject_name) VALUES (?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ss", $subjectCode, $subjectName);
+        
+
+        if ($stmt->execute()) {
+            debugLog("Subject added: $subjectCode - $subjectName");
+        } else {
+            debugLog("Error adding subject: " . $stmt->error);
+        }
+
+        $stmt->close();
+        closeCon($conn);
+    }
     ?>
