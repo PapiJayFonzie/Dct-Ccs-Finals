@@ -106,9 +106,15 @@
 </head>
 <body>
   <div class="sidebar">
-    
+        <div class="header">
+        Student Management System
+        </div>
+        <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="#"><i class="fas fa-book"></i> Subjects</a>
+        <a href="#"><i class="fas fa-user-graduate"></i> Students</a>
+        <div class="spacer"></div> <!-- Spacer for additional space -->
+        <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
   </div>
-
   <div class="content">
     <div class="header">Add a New Subject</div>
     <div class="form-container">
