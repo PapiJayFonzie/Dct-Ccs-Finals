@@ -13,7 +13,7 @@
             margin: 0;
         }
         .sidebar {
-            width: 300px;
+            width: px;
             background-color: #ffffff; /* Sidebar background color */
             color: blue;
             display: flex;
@@ -24,6 +24,7 @@
             background-color: black; /* Black background for the header */
             color: white; /* White text color */
             padding: 10px; /* Adjusted padding */
+            text-align: center;
             font-size: 0.9rem; /* Reduced font size */
             margin-bottom: 15px; /* Added space below the header */
         }
@@ -51,9 +52,10 @@
         h {
             margin-top: 30px; /* Adjust spacing above the dashboard title */
             display: block; /* Ensure it behaves like a block-level element */
+            font-size: 2rem;
         }
         .row .card {
-            margin-top: 15px; /* Add space below the dashboard row */
+            margin-top: 20px; /* Add space below the dashboard row */
         }
     </style>
 </head>
