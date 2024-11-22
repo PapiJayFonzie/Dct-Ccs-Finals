@@ -13,7 +13,7 @@
             margin: 0;
         }
         .sidebar {
-            width: 220px;
+            width: 300px;
             background-color: #ffffff; /* Sidebar background color */
             color: blue;
             display: flex;
@@ -24,8 +24,8 @@
             background-color: black; /* Black background for the header */
             color: white; /* White text color */
             padding: 10px; /* Adjusted padding */
-            text-align: center;
             font-size: 0.9rem; /* Reduced font size */
+            margin-bottom: 15px; /* Added space below the header */
         }
         .sidebar a {
             text-decoration: none;
@@ -48,8 +48,8 @@
             flex-grow: 1;
             padding: 20px; /* Add more padding around the content */
         }
-        h4 {
-            margin-top: 40px; /* Adjust spacing above the dashboard title */
+        h {
+            margin-top: 30px; /* Adjust spacing above the dashboard title */
             display: block; /* Ensure it behaves like a block-level element */
         }
         .row .card {
@@ -70,7 +70,7 @@
     </div>
 
     <div class="main-content">
-        <h4>Dashboard</h4>
+        <h>Dashboard</h>
         <div class="row">
             <div class="col-md-3">
                 <div class="card text-white bg-primary mb-3">
